@@ -57,3 +57,14 @@ function handleLose() {
     document.addEventListener("keypress", handleStart, { once: true })
   }, 100)
 }
+
+// In script.js
+
+// Import the necessary functions from Rocket.js
+import { handleButtonJump } from "./Rocket.js";
+
+// Add an event listener to the HTML input
+document.addEventListener("DOMContentLoaded", () => {
+  const controlInput = document.getElementById("controlButton");
+  controlInput.addEventListener("input", handleButtonJump);
+});

@@ -32,8 +32,12 @@ function getTop() {
 }
 
 function handleJump(e) {
-  if (e.code === "Space" || e.key === " " || e.key === "m" || e.key === "c") {
+  if (e.code === "Space" || e.key === " " || e.key === "u") {
     timeSinceLastJump = 0;
   }
 }
 
+// Function to handle button click event
+export function handleButtonJump() {
+  timeSinceLastJump = 0;
+}
