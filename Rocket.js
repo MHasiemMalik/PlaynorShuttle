@@ -32,7 +32,8 @@ function getTop() {
 }
 
 function handleJump(e) {
-  if (e.code !== "Space") return
-
-  timeSinceLastJump = 0
+  if (e.code === "Space" || e.key === " " || e.key === "m" || e.key === "c") {
+    timeSinceLastJump = 0;
+  }
 }
+

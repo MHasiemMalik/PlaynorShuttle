@@ -1,6 +1,22 @@
 *, *::after, *::before {
   box-sizing: border-box;
 }
+
+#controlButton {
+  position: fixed;
+  bottom: 20px; /* Adjust this value to control the distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  font-size: 20px;
+  font-family: 'Averia Sans Libre', sans-serif;
+  color: white;
+  opacity: 0.6;
+}
+
 #video-background {
   position: fixed;
   top: 0;
