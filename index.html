@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=0.1">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="Utils/Planor Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Averia+Sans+Libre:ital,wght@0,300;0,400;1,700&family=Marhey:wght@300;600;700&family=Montagu+Slab:opsz,wght@16..144,500&family=Noto+Serif:ital,wght@0,800;0,900;1,800;1,900&family=Pridi:wght@500&display=swap" rel="stylesheet">
   <script src="script.js" type="module"></script>
   <title>ShuttleFlip</title>
   <script>
-    window.addEventListener('resize', function() {
-      var viewport = document.getElementById('viewport');
-      if (window.innerWidth <= 900) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=0.1');
-      } else {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1');
-      }
-    });
-  </script>
+    // Select the viewport meta tag
+const viewportMetaTag = document.getElementById('viewport');
+
+// Check the screen width and set the viewport scale accordingly
+function updateViewportScale() {
+  if (window.innerWidth <= 800) {
+    viewportMetaTag.setAttribute('content', 'width=device-width, initial-scale=0.1');
+  } else {
+    viewportMetaTag.setAttribute('content', 'width=device-width, initial-scale=1');
+  }
+}
+
+// Call the function initially and whenever the window is resized
+updateViewportScale();
+window.addEventListener('resize', updateViewportScale);
+</script>
 </head>
 <body>
   <div id="ct">
